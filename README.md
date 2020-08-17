@@ -50,7 +50,9 @@ LNEBCELL = .FALSE. # Requires ISIF = 3 and IOPT = 3
 ```
 
 Note that ``IMAGES`` is the number of images excluding the end points. 
+
 Run a VASP SCF calculation in the first and last image directory since VTST only performs the calculation for the intermediate images.
+
 Now you can run VASP in the current directory to obtain the minimum energy path between the initial and final states. This calculation is computationally expensive since the number of nodes required is the same as ``IMAGES`` set in the ``INCAR``. The VTST scripts directory contains several scripts for post-processing the outputs. More info is available on their webpage. 
 
 ## Reference
