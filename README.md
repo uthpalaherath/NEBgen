@@ -22,7 +22,7 @@ export PATH="/home1/05979/uthpala/local/VTST/vtstscripts-957:$PATH"
 
 ## Usage
 
-This script, makeNEB.sh, performs a linear interpolation of an initial POSCAR and a final POSCAR using ``nebmake.pl`` from VTST tools. Then it puts all the generated POSCAR's into the directory 'linint'. Afterwards it runs DiSPy with provided ``INPUT``. The perturbed files will be copied back to the respective directories ready for a NEB calculation with VASP. The default irreducible representation is set to #1 for the perturbation.
+This script, makeNEB.sh, performs a linear interpolation between an initial state and a final state using ``nebmake.pl`` from VTST tools. Then it puts all the generated intermediate POSCAR's into the directory 'linint'. Afterwards it runs DiSPy with the provided ``INPUT``. The perturbed files will be copied back to the respective directories ready for a NEB calculation with VASP. The default irreducible representation is set to #1 for the perturbation.
 
 ```bash
 makeNEB.sh <initial POSCAR> <final POSCAR> <Total number of images>
