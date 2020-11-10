@@ -53,7 +53,7 @@ for (( i=0; i<$3; i++ ))
 do
     cp ./results/output_structures/$i $(printf %02d $i)/POSCAR
 done
-echo "Done. Ready to run NEB with VASP."
+echo "Done."
 
 # Reset PERTURB=FALSE
 sed -i 's/PERTURB=TRUE/PERTURB=FALSE/g' INPUT
