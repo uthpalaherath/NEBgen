@@ -26,7 +26,7 @@ cp ../inputs/OUTCAR_final $(printf %02d $last_dir)/OUTCAR
 
 # Only run VASP if valid irredicuble representation found.
 done=$( tail -n 1 makeNEB.out )
-if [$done == 'Done.']
+if [ $done = 'Done.' ]
 then
     nebavoid.pl $atom_sep
     mpirun -np $cores vasp_std
