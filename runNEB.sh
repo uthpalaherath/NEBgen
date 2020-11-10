@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # This script runs the VASP NEB calculation for batch jobs.
+# runNEB.sh <POSCAR_initial> <POSCAR_final> <Total images> <num of cores> <separation in Angstroms>
 
 # Inputs. num_img is the total number of images including endpoints.
-POSCAR_in=POSCAR_initial
-POSCAR_fin=POSCAR_final
-num_img=10
-cores=320
-atom_sep=1.0 # Minimum atom separation in Angstroms
+POSCAR_in=$1
+POSCAR_fin=$2
+num_img=$3
+cores=$4
+atom_sep=$5 # Minimum atom separation in Angstroms
 
 # Change IRR_NUM in INPUT as the directry name number.
 dirname=$PWD
