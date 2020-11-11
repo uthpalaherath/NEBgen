@@ -85,7 +85,19 @@ for i in reps:
             if force:
                 submitter(i)
             else:
-                pass
+                print("Completed calculation at : %s " % i)
+
+        elif os.path.exists(i + "/makeNEB.out"):
+            fi = open(i + "/makeNEB.out", "r")
+            data = fi.readlines()
+            fi.close()
+            doneword = data[-1].split()[0]
+
+            if doneword == "Invalid":
+                print("Invalid irreducible representation at : %s" % i)
+            elif doneword == "Done.":
+                print("Calculation in progress at : %s" % i)
+
         else:
             print("Incomplete calculation at irreducible representation : %s " % i)
             submitter(i)
