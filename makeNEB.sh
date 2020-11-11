@@ -48,7 +48,7 @@ echo "Performing perturbation..."
 dispy INPUT
 
 done=$( tail -n 11 results/output.out | head -n 1 | awk '{print $1;}' )
-if [ $done = 'Task' ]
+if [ "$done" == 'Task' ]
 then
     # copying perturbed images back to directories
     echo "Copying perturbed images back to directories ..."
