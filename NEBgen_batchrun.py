@@ -39,6 +39,10 @@ outputfile = "output.out"
 # Force calculation for already calculated runs
 force = False
 
+# Force calculation for calculations noted as in progress.
+# Useful if jobs are cancelled while running VASP.
+force_in_progress = False
+
 # Name of scheduler on cluster
 scheduler = "qsub"  # "sbatch"
 
@@ -96,7 +100,10 @@ for i in reps:
             if doneword == "Invalid":
                 print("Invalid irreducible representation at : %s" % i)
             elif doneword == "Done.":
+                # VASP run in progress
                 print("Calculation in progress at : %s" % i)
+                if force_in_progress:
+                    submitter(i)
 
         else:
             print("Incomplete calculation at irreducible representation : %s " % i)
