@@ -72,9 +72,9 @@ where,
 
     runNEB.sh <POSCAR_initial> <POSCAR_final> <Total no. of images> <num of cores> <minimum atom separation in Angstroms>
 
-2. Run makeNEB.sh with IRR_NUM=1 in INPUT in a temporary directory with the input files to obtain the results/output.out file. Copy the output.out file to the root directory. Now set IRR_NUM=XXX in INPUT in the "inputs" directory.
+2. Run makeNEB.sh with ``IRR_NUM=1`` in INPUT in a temporary directory with the input files to obtain the results/output.out file. Copy the output.out file to the root directory. Now set ``IRR_NUM=XXX`` in INPUT in the "inputs" directory.
 
-3. Run NEBgen_batchrun.py in the root directory.
+3. Run ``NEBgen_batchrun.py`` in the root directory.
 
 
 ## Reference
