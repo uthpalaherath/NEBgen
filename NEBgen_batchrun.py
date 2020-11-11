@@ -30,45 +30,55 @@ outputfile = "output.out"
 force = False
 
 # Read all the irreducible representations
-fi = open(outputfile,"r")
+fi = open(outputfile, "r")
 data = fi.read()
 fi.close()
 
-reps = re.findall(r'Irrep\s*#([0-9]*):',data)
-input_files = ["INCAR", "INPUT", "KPOINTS", "POTCAR", "POSCAR_initial", "POSCAR_final","jobscript.sh"]
+reps = re.findall(r"Irrep\s*#([0-9]*):", data)
+input_files = [
+    "INCAR",
+    "INPUT",
+    "KPOINTS",
+    "POTCAR",
+    "POSCAR_initial",
+    "POSCAR_final",
+    "jobscript.sh",
+]
+
 
 def submitter(jobid):
+    """
+    Submits the job to cd into the directory and calls runNEB.sh.
+    i.e.
+    runNEB.sh POSCAR_initial POSCAR_final 10 320 1.0
+
+    """
     for j in input_files:
-        infile = "./inputs/"+j
-        shutil.copy(infile,jobid)
+        infile = "./inputs/" + j
+        shutil.copy(infile, jobid)
 
     cmd = "cd " + jobid + "; sbatch jobscript.sh;cd .."
     out, err = subprocess.Popen(cmd, shell=True).communicate()
     if err:
         print(err)
     else:
-        print("Submitting irreducible representation : %s" %jobid)
+        print("Submitting irreducible representation : %s" % jobid)
+
 
 for i in reps:
     if os.path.exists(i):
-    # Assume a complete calculation if the file mep.eps exists.
-        if os.path.exists(i+"/mep.eps"):
+        # Assume a complete calculation if the file mep.eps exists.
+        if os.path.exists(i + "/mep.eps"):
             if force:
                 submitter(i)
             else:
                 pass
         else:
-            print("Incomplete calculation at irreducible representation : %s " %i)
+            print("Incomplete calculation at irreducible representation : %s " % i)
             submitter(i)
 
     else:
         os.makedirs(i)
         submitter(i)
 
-print("%s irreducible representations submitted." %len(reps))
-
-
-
-
-
-
+print("%s irreducible representations submitted." % len(reps))
