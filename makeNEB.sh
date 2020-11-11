@@ -47,14 +47,20 @@ sed -i 's/PERTURB=FALSE/PERTURB=TRUE/g' INPUT
 echo "Performing perturbation..."
 dispy INPUT
 
-# copying perturbed images back to directories
-echo "Copying perturbed images back to directories ..."
+done=$( tail -n 11 results/output.out | head -n 1 | awk '{print $1;}' )
+if [ $done = 'Task' ]
+then
+    # copying perturbed images back to directories
+    echo "Copying perturbed images back to directories ..."
 
-for (( i=0; i<$3; i++ ))
-do
-    cp ./results/output_structures/$i $(printf %02d $i)/POSCAR
-done
-echo "Done."
+    for (( i=0; i<$3; i++ ))
+    do
+        cp ./results/output_structures/$i $(printf %02d $i)/POSCAR
+    done
+    echo "Done."
+else
+    echo "Invalid Irreducible Representation!"
+fi
 
 # Reset PERTURB=FALSE
 sed -i 's/PERTURB=TRUE/PERTURB=FALSE/g' INPUT
