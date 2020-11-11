@@ -1,6 +1,6 @@
 # NEBgen
 
-NEBgen prepares POSCAR's for Nudged Elastic Band (NEB) calculations through Distortion Symmetry Method with [VTST](http://theory.cm.utexas.edu/vtsttools/)  and [DiSPy](https://github.com/munrojm/DiSPy).
+NEBgen prepares POSCAR's for Nudged Elastic Band (NEB) calculations through Distortion Symmetry Method with [VTST](http://theory.cm.utexas.edu/vtsttools/) and [DiSPy](https://github.com/munrojm/DiSPy).
 The nudged elastic band (NEB) method is a popular method for calculating the minimum energy pathways of kinetic processes. Although, linear interpolation between an initial and final structure (image) provides a decent estimate for the minimum energy pathway, the Distortion Symmetry Method takes into account symmetry-adapted perturbations to systematically lower the initial path symmetry, enabling the exploration of other low-energy pathways that may exist. 
 
 
@@ -12,7 +12,7 @@ First install the following prerequisites:
 
 2. [DiSPy](https://github.com/munrojm/DiSPy) - Applies Distortion Symmetry Method to images.
 
-Once installed, add the VTST scripts directory to your environment PATH.
+Once installed, add the VTST scripts directory to your environment PATH. Additionally, add the NEBgen directory to $PATH as well.
 
 E.g.-
 
@@ -54,6 +54,28 @@ Note that ``IMAGES`` is the number of images excluding the end points.
 Run a VASP SCF calculation in the first and last image directory since VTST only performs the calculation for the intermediate images.
 
 Now VASP can be run in the current directory to obtain the minimum energy path between the initial and final states. This calculation is computationally expensive since the number of nodes required is the same as ``IMAGES`` set in the ``INCAR``. The VTST scripts directory contains several scripts for post-processing the outputs. More info is available on their webpage. 
+
+## Batch job submission
+
+Using the ``NEBgen_batchrun.py`` script it is possible to run a complete NEB calculation for all the irredicible representations found. 
+
+### Instructions
+
+1. Create a directory "inputs" in the root directory of the calculation which includes the INCAR, KPOINTS, POTCAR, POSCAR_initial, POSCAR_final, OUTCAR_initial, OUTCAR_final, INPUT and jobscript.sh. OUTCAR_initial and OUTCAR_final are from SCF calculations of the end point images. jobscript.sh is a job script for the job scheduler on the cluster that calls runNEB.sh and would look like the following:
+
+```
+cd $SLURM_SUBMIT_DIR/
+runNEB.sh POSCAR_initial POSCAR_final 10 320 1.0
+```
+
+where,
+
+    runNEB.sh <POSCAR_initial> <POSCAR_final> <Total no. of images> <num of cores> <minimum atom separation in Angstroms>
+
+2. Run makeNEB.sh with IRR_NUM=1 in INPUT in a temporary directory with the input files to obtain the results/output.out file. Copy the output.out file to the root directory. Now set IRR_NUM=XXX in INPUT in the "inputs" directory.
+
+3. Run NEBgen_batchrun.py in the root directory.
+
 
 ## Reference
 

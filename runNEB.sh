@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script runs the VASP NEB calculation for batch jobs.
+# This script runs the VASP NEB calculation for batch jobs in each directory.
 # runNEB.sh <POSCAR_initial> <POSCAR_final> <Total images> <num of cores> <separation in Angstroms>
 
 # Inputs. num_img is the total number of images including endpoints.

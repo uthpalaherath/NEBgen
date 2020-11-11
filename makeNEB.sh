@@ -6,6 +6,7 @@
 # 'linint'. Afterwards it runs DiSPy with provided INPUT.
 # The perturbed files will be copied back to the respective directories.
 # The default irreducible representation is set to #1 for perturbation.
+# Once this is done, VASP can be run to calculate NEB.
 
 # usage:
 # makeNEB.sh <initial POSCAR> <final POSCAR> <Total number of images>
@@ -59,7 +60,3 @@ echo "Done."
 sed -i 's/PERTURB=TRUE/PERTURB=FALSE/g' INPUT
 rm -rf results_old*
 rm -rf linint
-
-
-
-

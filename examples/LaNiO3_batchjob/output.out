@@ -1,0 +1,592 @@
+  
+  ____  _ ____  ____        
+ |  _ \(_) ___||  _ \ _   _ 
+ | | | | \___ \| |_) | | | |
+ | |_| | |___) |  __/| |_| |
+ |____/|_|____/|_|    \__, |
+                      |___/ 
+
+DiSPy v0.2 run started on Wed Oct 14 01:13:58 2020
+
+This code uses the tabulation of irreducible representations 
+of the crystallographic space groups by H.T. Stokes and coworkers:
+
+"H.T. Stokes et. al., Acta Cryst. A. 69, 388-395 (2013)."
+
+===================================================================
+
+-------
+-------
+------- Symmetry of images:
+-------
+-------
+
+Image 1: C2 (5)
+Image 2: P1 (1)
+Image 3: P1 (1)
+Image 4: P1 (1)
+Image 5: P1 (1)
+Image 6: P1 (1)
+Image 7: P1 (1)
+Image 8: P1 (1)
+Image 9: P1 (1)
+Image 10: C2 (5)
+
+-------
+------- Elements of distortion group in the basis of the inputted structures:
+-------
+
+Symmetry Element 1 (Unstarred):
+Rotation:
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+Translation:
+[0. 0. 0.]
+The operation has been identified as the identity.
+
+
+-------
+------- Symmetry operations in Bilbao IDENTIFY GROUP format:
+-------
+
+x,y,z
+
+
+-------
+------- Elements of distortion group in the standard basis:
+-------
+
+Transformation matrix and origin shift...
+
+Matrix:
+[[ 1. -1.  0.]
+ [ 1. -0.  0.]
+ [ 0.  0.  1.]]
+Origin shift:
+[0. 0. 0.]
+
+
+
+Symmetry Element 1 (Unstarred):
+Rotation:
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+Translation:
+[0. 0. 0.]
+The operation has been identified as the identity.
+
+
+-------
+------- Distortion group:
+-------
+
+P1
+
+-------
+------- Possible irreps of the distortion group:
+-------
+
+Irrep #1: GM1
+Irrep #2: Z1
+Irrep #3: X1
+Irrep #4: U1
+Irrep #5: V1
+Irrep #6: R1
+Irrep #7: Y1
+Irrep #8: T1
+Irrep #9: GP1GQ1
+Irrep #26: GP1
+Irrep #53: GP1GQ1
+Irrep #76: GP1GQ1
+Irrep #92: GP1GQ1
+Irrep #117: GP1GQ1
+Irrep #138: GP1GQ1
+Irrep #153: GP1GQ1
+Irrep #166: GP1GQ1
+Irrep #211: GP1
+Irrep #243: GP1
+Irrep #270: GP1
+Irrep #301: GP1
+Irrep #327: GP1
+Irrep #347: GP1
+Irrep #394: P1
+Irrep #410: GP1GQ1
+Irrep #443: P1P2
+Irrep #457: GP1GQ1
+Irrep #486: P1P2
+Irrep #498: GP1GQ1
+Irrep #523: P1P1
+Irrep #537: GP1GQ1
+Irrep #565: P1
+Irrep #567: GP1GQ1
+Irrep #604: P1
+Irrep #606: GP1GQ1
+Irrep #639: GP1GQ1
+Irrep #662: P1PA1
+Irrep #673: GP1GQ1
+Irrep #696: P1PA1
+Irrep #704: GP1GQ1
+Irrep #753: P1
+Irrep #779: GP1GQ1
+Irrep #819: P1P1
+Irrep #844: GP1GQ1
+Irrep #883: P1P2
+Irrep #907: GP1GQ1
+Irrep #943: P1P2
+Irrep #962: GP1GQ1
+Irrep #993: P1P1
+Irrep #1013: GP1GQ1
+Irrep #1043: P1P2
+Irrep #1062: GP1GQ1
+Irrep #1093: P1P2
+Irrep #1111: GP1GQ1
+Irrep #1142: P1P2
+Irrep #1160: GP1GQ1
+Irrep #1188: P1P1
+Irrep #1207: GP1GQ1
+Irrep #1236: P1
+Irrep #1256: GP1GQ1
+Irrep #1299: P1
+Irrep #1301: GP1GQ1
+Irrep #1338: P1
+Irrep #1340: GP1GQ1
+Irrep #1377: P1
+Irrep #1379: GP1GQ1
+Irrep #1420: P1PA1
+Irrep #1424: GP1GQ1
+Irrep #1463: P1PA1
+Irrep #1467: GP1GQ1
+Irrep #1498: P1PA1
+Irrep #1502: GP1GQ1
+Irrep #1531: P1PA1
+Irrep #1535: GP1GQ1
+Irrep #1574: GP1GQ1
+Irrep #1600: GP1GQ1
+Irrep #1624: P1PA1
+Irrep #1634: GP1GQ1
+Irrep #1656: P1PA1
+Irrep #1666: GP1GQ1
+Irrep #1689: P1PA1
+Irrep #1698: GP1GQ1
+Irrep #1791: P1
+Irrep #1823: GP1
+Irrep #1868: P1
+Irrep #1894: GP1
+Irrep #1957: P1
+Irrep #1983: GP1
+Irrep #2034: P1
+Irrep #2054: GP1
+Irrep #2120: P1
+Irrep #2144: GP1
+Irrep #2183: P1
+Irrep #2203: GP1
+Irrep #2252: P1
+Irrep #2271: GP1
+Irrep #2317: P1P4
+Irrep #2339: GP1
+Irrep #2396: P1P4
+Irrep #2414: GP1
+Irrep #2453: P1P4
+Irrep #2473: GP1
+Irrep #2521: P1P3
+Irrep #2540: GP1
+Irrep #2583: P1
+Irrep #2599: GP1
+Irrep #2650: P1
+Irrep #2668: GP1
+Irrep #2705: P1P1
+Irrep #2722: GP1
+Irrep #2760: P1P1
+Irrep #2775: GP1
+Irrep #2816: P1P2
+Irrep #2833: GP1
+Irrep #2884: P1
+Irrep #2887: GP1
+Irrep #2935: P1
+Irrep #2938: GP1
+Irrep #3009: P1
+Irrep #3013: GP1
+Irrep #3066: P1
+Irrep #3070: GP1
+Irrep #3134: P1
+Irrep #3138: GP1
+Irrep #3184: P1
+Irrep #3188: GP1
+Irrep #3253: GP1
+Irrep #3291: GP1
+Irrep #3334: P1
+Irrep #3348: GP1
+Irrep #3384: P1
+Irrep #3395: GP1
+Irrep #3428: P1P2
+Irrep #3437: GP1
+Irrep #3477: P1P2
+Irrep #3487: GP1
+Irrep #3525: GP1GQ1
+Irrep #3560: GP1GQ1
+Irrep #3598: GP1GQ1
+Irrep #3633: GP1GQ1
+Irrep #3649: P1
+Irrep #3658: GP1GQ1
+Irrep #3674: P1P2
+Irrep #3682: GP1GQ1
+Irrep #3716: GP1GQ1
+Irrep #3730: P1PA1
+Irrep #3741: GP1GQ1
+Irrep #3801: GP1
+Irrep #3853: GP1
+Irrep #3898: GP1
+Irrep #3943: GP1
+Irrep #3969: P1
+Irrep #3981: GP1
+Irrep #4000: P1P4
+Irrep #4010: GP1
+Irrep #4066: GP1GQ1
+Irrep #4107: GP1GQ1
+Irrep #4151: GP1GQ1
+Irrep #4187: GP1GQ1
+Irrep #4243: GP1GQ1
+Irrep #4284: GP1GQ1
+Irrep #4328: GP1GQ1
+Irrep #4364: GP1GQ1
+Irrep #4389: P1
+Irrep #4401: GP1GQ1
+Irrep #4426: P1
+Irrep #4436: GP1GQ1
+Irrep #4499: GP1GQ1
+Irrep #4547 1: GP1GQ1
+Irrep #4602 1: GP1GQ1
+Irrep #4650 1: GP1GQ1
+Irrep #4704 1: GP1GQ1
+Irrep #4749 1: GP1GQ1
+Irrep #4807 1: GP1GQ1
+Irrep #4852 1: GP1GQ1
+Irrep #4878 1: P1
+Irrep #4893 1: GP1GQ1
+Irrep #4918 1: P1P2
+Irrep #4933 1: GP1GQ1
+Irrep #4954 1: P1
+Irrep #4963 1: GP1GQ1
+Irrep #4983 1: P1P1
+Irrep #4992 1: GP1GQ1
+Irrep #5047 1: GP1GQ1
+Irrep #5097 1: GP1GQ1
+Irrep #5139 1: GP1GQ1
+Irrep #5178 1: GP1GQ1
+Irrep #5236 1: GP1GQ1
+Irrep #5286 1: GP1GQ1
+Irrep #5329 1: GP1GQ1
+Irrep #5372 1: GP1GQ1
+Irrep #5396 1: P1
+Irrep #5409 1: GP1GQ1
+Irrep #5432 1: P1P2
+Irrep #5443 1: GP1GQ1
+Irrep #5467 1: P1PA1
+Irrep #5484 1: GP1GQ1
+Irrep #5503 1: P1PA1
+Irrep #5513 1: GP1GQ1
+Irrep #5618 1: GP1
+Irrep #5694 1: GP1
+Irrep #5766 1: GP1
+Irrep #5828 1: GP1
+Irrep #5903 1: GP1
+Irrep #5961 1: GP1
+Irrep #6031 1: GP1
+Irrep #6086 1: GP1
+Irrep #6176 1: GP1
+Irrep #6257 1: GP1
+Irrep #6319 1: GP1
+Irrep #6391 1: GP1
+Irrep #6453 1: GP1
+Irrep #6516 1: GP1
+Irrep #6576 1: GP1
+Irrep #6639 1: GP1
+Irrep #6685 1: P1
+Irrep #6706 1: GP1
+Irrep #6749 1: P1P3
+Irrep #6767 1: GP1
+Irrep #6801 1: P1
+Irrep #6813 1: GP1
+Irrep #6844 1: P1P2
+Irrep #6854 1: GP1
+Irrep #6872 1: P1PC1
+Irrep #6882 1: GP1GQ1
+Irrep #6900 1: P1PC1
+Irrep #6910 1: GP1GQ1
+Irrep #6928 1: P1PC1
+Irrep #6938 1: GP1GQ1
+Irrep #6951 1: GP1GQ1
+Irrep #6972 1: P1
+Irrep #6981 1: GP1
+Irrep #6999 1: GP1
+Irrep #7022 1: P1
+Irrep #7033 1: GP1GQ1
+Irrep #7056 1: P1PA1
+Irrep #7067 1: GP1GQ1
+Irrep #7090 1: P1
+Irrep #7101 1: GP1GQ1
+Irrep #7124 1: P1PA1
+Irrep #7135 1: GP1GQ1
+Irrep #7158 1: P1
+Irrep #7169 1: GP1GQ1
+Irrep #7192 1: P1PA1
+Irrep #7203 1: GP1GQ1
+Irrep #7222 1: GP1GQ1
+Irrep #7245 1: P1PA1
+Irrep #7258 1: GP1GQ1
+Irrep #7281 1: P1PC1
+Irrep #7294 1: GP1GQ1
+Irrep #7315 1: P1PA1
+Irrep #7328 1: GP1GQ1
+Irrep #7349 1: P1PC1
+Irrep #7362 1: GP1GQ1
+Irrep #7380 1: GP1GQ1
+Irrep #7396 1: GP1GQ1
+Irrep #7430 1: P1
+Irrep #7444 1: GP1
+Irrep #7471 1: P1
+Irrep #7484 1: GP1
+Irrep #7518 1: P1
+Irrep #7531 1: GP1
+Irrep #7557 1: P1
+Irrep #7569 1: GP1
+Irrep #7599 1: GP1
+Irrep #7621 1: GP1
+Irrep #7646 1: P1PA1
+Irrep #7657 1: GP1GQ1
+Irrep #7680 1: P1PA1
+Irrep #7691 1: GP1GQ1
+Irrep #7714 1: P1PA1
+Irrep #7725 1: GP1GQ1
+Irrep #7750 1: P1PA1
+Irrep #7761 1: GP1GQ1
+Irrep #7786 1: P1PA1
+Irrep #7797 1: GP1GQ1
+Irrep #7820 1: P1PA1
+Irrep #7831 1: GP1GQ1
+Irrep #7862 1: P1PA1
+Irrep #7876 1: GP1GQ1
+Irrep #7917 1: P1
+Irrep #7931 1: GP1
+Irrep #7962 1: P1
+Irrep #7973 1: GP1
+Irrep #8010 1: P1
+Irrep #8023 1: GP1GQ1
+Irrep #8053 1: P1
+Irrep #8064 1: GP1GQ1
+Irrep #8094 1: P1
+Irrep #8105 1: GP1GQ1
+Irrep #8142 1: P1
+Irrep #8155 1: GP1GQ1
+Irrep #8192 1: P1
+Irrep #8205 1: GP1GQ1
+Irrep #8235 1: P1
+Irrep #8246 1: GP1GQ1
+Irrep #8283 1: P1PA1
+Irrep #8300 1: GP1GQ1
+Irrep #8332 1: P1PA1
+Irrep #8347 1: GP1GQ1
+Irrep #8379 1: P1PA1
+Irrep #8395 1: GP1GQ1
+Irrep #8426 1: P1PA1
+Irrep #8442 1: GP1GQ1
+Irrep #8484 1: P1
+Irrep #8502 1: GP1GQ1
+Irrep #8534 1: P1
+Irrep #8548 1: GP1GQ1
+Irrep #8590 1: P1PA1
+Irrep #8608 1: GP1GQ1
+Irrep #8640 1: P1PA1
+Irrep #8654 1: GP1GQ1
+Irrep #8721 1: P1
+Irrep #8744 1: GP1
+Irrep #8793 1: P1
+Irrep #8810 1: GP1
+Irrep #8859 1: P1
+Irrep #8876 1: GP1
+Irrep #8925 1: P1
+Irrep #8942 1: GP1
+Irrep #8973 1: GP1GQ1
+Irrep #8996 1: GP1GQ1
+Irrep #9011 1: P1PA1
+Irrep #9020 1: GP1GQ1
+Irrep #9043 1: GP1GQ1
+Irrep #9058 1: P1PA1
+Irrep #9066 1: GP1GQ1
+Irrep #9122 2: GP1
+Irrep #9160 2: GP1
+Irrep #9199 2: GP1
+Irrep #9226 2: GP1
+Irrep #9251 2: P1
+Irrep #9261 2: GP1
+Irrep #9292 2: GP1
+Irrep #9314 2: P1P3
+Irrep #9322 2: GP1
+Irrep #9363 2: GP1GQ1
+Irrep #9404 2: GP1GQ1
+Irrep #9436 2: GP1GQ1
+Irrep #9466 2: GP1GQ1
+Irrep #9490 2: P1
+Irrep #9500 2: GP1GQ1
+Irrep #9529 2: GP1GQ1
+Irrep #9558 2: GP1GQ1
+Irrep #9582 2: P1
+Irrep #9591 2: GP1GQ1
+Irrep #9631 2: GP1GQ1
+Irrep #9663 2: GP1GQ1
+Irrep #9686 2: P1PA1
+Irrep #9700 2: GP1GQ1
+Irrep #9735 2: GP1GQ1
+Irrep #9764 2: GP1GQ1
+Irrep #9782 2: P1PA1
+Irrep #9790 2: GP1GQ1
+Irrep #9862 2: GP1
+Irrep #9908 2: GP1
+Irrep #9964 2: GP1
+Irrep #0021 2: GP1
+Irrep #0075 2: GP1
+Irrep #0122 2: GP1
+Irrep #0164 2: GP1
+Irrep #0200 2: GP1
+Irrep #0241 2: P1
+Irrep #0258 2: GP1
+Irrep #0286 2: P1P2
+Irrep #0294 2: GP1
+
+
+
+Irrep. #5 chosen...
+
+
+
+------- Irrep. Matrices:
+
+Symmetry Element 1 : 
+[[1.]]
+
+
+
+
+
+===========================
+===========================
+
+Generating perturbations...
+
+===========================
+===========================
+
+
+***THE FOLLOWING DATA IS FOR THE PERTURBED IMAGES***
+
+
+------- Atoms included in basis:
+La No
+La No
+La No
+La No
+La No
+La No
+Ni No
+Ni No
+Ni No
+Ni No
+Ni No
+Ni No
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+O Yes
+
+-------
+-------
+------- Symmetry of images:
+-------
+-------
+
+Image 1: C2 (5)
+Image 2: P1 (1)
+Image 3: P1 (1)
+Image 4: P1 (1)
+Image 5: P1 (1)
+Image 6: P1 (1)
+Image 7: P1 (1)
+Image 8: P1 (1)
+Image 9: P1 (1)
+Image 10: C2 (5)
+
+-------
+------- Elements of distortion group in the basis of the inputted structures:
+-------
+
+Symmetry Element 1 (Unstarred):
+Rotation:
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+Translation:
+[0. 0. 0.]
+The operation has been identified as the identity.
+
+
+-------
+------- Elements of distortion group in the standard basis:
+-------
+
+Transformation matrix and origin shift...
+
+Matrix:
+[[ 1. -1.  0.]
+ [ 1. -0.  0.]
+ [ 0.  0.  1.]]
+Origin shift:
+[0. 0. 0.]
+
+
+
+Symmetry Element 1 (Unstarred):
+Rotation:
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+Translation:
+[0. 0. 0.]
+The operation has been identified as the identity.
+
+
+-------
+------- Distortion group:
+-------
+
+P1
+
+
+==================================================
+
+
+Task completed on Wed Oct 14 01:14:02 2020
+
+
+If you found this program useful, please consider citing:
+
+"J.M. Munro et. al. Implementation of distortion symmetry for the nudged elastic band method with DiSPy. npj Comp. Mat. (2019)."
+
+"J.M. Munro et. al. Discovering minimum energy pathways via distortion symmetry groups. Phys. Rev. B (2018)."
+
+"B.K. VanLeeuwen & V. Gopalan. The antisymmetry of distortions. Nat. Commun. (2015)."
+

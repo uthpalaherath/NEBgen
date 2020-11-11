@@ -1,20 +1,30 @@
 #!/usr/bin/env python
 
-"""Directory Generator and job submitter for NEBgen.
+"""Batch job submitter for NEBgen.
 
-This script creates directories for each Irreducible representations for NEB calculations using the makeNEB.sh script.
-It reads the list of irreducible representations from output.out generated from the makeNEB.sh inside results/output.out.
-Afterwards, it submits the jobs inside each directory with runNEB.sh provided it is called from the jobscript.sh submission script.
-It also assumes that the input files (INCAR, KPOINTS, POTCAR, POSCAR_initial, POSCAR_final, OUTCAR_initial, OUTCAR_final, INPUT )
-are in a directory named "inputs" in the root directory.
+This script creates directories for each irreducible representations and performs the NEB calculation on each of them.
 
+Author: Uthpala Herath
+email: ukh0001@mix.wvu.edu
 
-Usage:
+Instructions:
 
-1. Run makeNEB.sh in a tmp directory with the inputs to obtain the output.out file. Set outputfile to point to this file.
-IRR_NUM in INPUT should be set to 1 for this initial temporary run and then to XXX prior to running this script.
+1. Create a directory "inputs" in the root directory of the calculation which includes the INCAR, KPOINTS, POTCAR, POSCAR_initial, POSCAR_final,
+OUTCAR_initial, OUTCAR_final, INPUT and jobscript.sh. OUTCAR_initial and OUTCAR_final are from SCF calculations of the end point images. jobscript.sh
+is a job script for the job scheduler on the cluster that calls runNEB.sh and would look like the following:
 
-2. Run this script in the root directory.
+E.g.-
+    cd $SLURM_SUBMIT_DIR/
+    runNEB.sh POSCAR_initial POSCAR_final 10 320 1.0
+
+where,
+
+    runNEB.sh <POSCAR_initial> <POSCAR_final> <Total no. of images> <num of cores> <minimum atom separation in Angstroms>
+
+2. Run makeNEB.sh with IRR_NUM=1 in INPUT in a temporary directory with the input files to obtain the results/output.out file.
+Copy the output.out file to the root directory. Now set IRR_NUM=XXX in INPUT in the "inputs" directory.
+
+3. Run NEBgen_batchrun.py in the root directory.
 
 """
 
@@ -28,6 +38,9 @@ outputfile = "output.out"
 
 # Force calculation for already calculated runs
 force = False
+
+# Name of scheduler on cluster
+scheduler = "qsub"  # "sbatch"
 
 # Read all the irreducible representations
 fi = open(outputfile, "r")
@@ -57,7 +70,7 @@ def submitter(jobid):
         infile = "./inputs/" + j
         shutil.copy(infile, jobid)
 
-    cmd = "cd " + jobid + "; sbatch jobscript.sh;cd .."
+    cmd = "cd " + jobid + ";" + scheduler + " jobscript.sh;cd .."
     out, err = subprocess.Popen(cmd, shell=True).communicate()
     if err:
         print(err)
